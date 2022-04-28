@@ -16,7 +16,7 @@
     <meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
     <meta property="og:image" content="../../zenix.dexignzone.com/xhtml/social-image.png" />
     <meta name="format-detection" content="telephone=no">
-    <title>{{ Auth::user()->name }} Dashboard </title>
+    <title>{{ Auth::user()->name }} Dashboard| Lelescoenterprise </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/dlog.jpeg')}}">
     <link rel="stylesheet" href="{{asset('vendor/chartist/css/chartist.min.css')}}">
@@ -185,8 +185,8 @@
                 </li>
             </ul>
             <div class="copyright">
-                <p><strong>AWM Customer Dashboard</strong> © 2022 All Rights Reserved</p>
-                <p class="fs-12">Design<span class="heart"></span> by Primedata</p>
+                <p><strong>Lelescoenterprise Customer Dashboard</strong> © 2022 All Rights Reserved</p>
+                <p class="fs-12">Design<span class="heart"></span> by Lelescoenterprise</p>
             </div>
         </div>
     </div>

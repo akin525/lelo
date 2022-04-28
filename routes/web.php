@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\ElectController;
 use App\Http\Controllers\FundController;
+use App\Http\Controllers\VertualController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +25,7 @@ Route::get('/', function () {
             ->withSuccess('Signed in');
 
     }else {
-        return view('auth.login');
+        return view('welcome');
     }
 });
 
@@ -56,4 +57,6 @@ Route::post('pre', [AuthController::class, 'pre'])->name('pre');
 Route::post('bill', [BillController::class, 'bill'])->name('bill');
 Route::get('fund', [FundController::class, 'fund'])->name('fund');
 Route::get('tran/{reference}', [FundController::class, 'tran'])->name('tran');
+Route::get('vertual', [VertualController::class, 'vertual'])->name('vertual');
+
 require __DIR__.'/auth.php';
