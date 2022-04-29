@@ -20,7 +20,7 @@ class VertualController
     {
         if (Auth::check()) {
             $user = User::find($request->user()->id);
-            $wallet = wallet::where('username', $user->username)->first();
+//            $wallet = wallet::where('username', $user->username)->first();
 
             $curl = curl_init();
 
