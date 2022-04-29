@@ -243,7 +243,7 @@
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-tachometer"></i></div>
                             <h4><a href="">CableTV</a></h4>
-                            <p>Pay your gotv, DSTV, Startimes</p>
+                            <p>Pay your Gotv, DSTV, Startimes</p>
                         </div>
                     </div>
 
@@ -314,9 +314,9 @@
                                 <span>Assistance Manager</span>
                                 <p>Assistance Manager of  Lelesco Enterprise</p>
                                 <div class="social">
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href="http://wa.me/2348133347164"> <i class="ri-whatsapp-fill"></i> </a>
+                                    <a href="https://web.facebook.com/maduka.vivian.96"><i class="ri-facebook-fill"></i></a>
+                                    <a href="https://www.instagram.com/nikkyvee"><i class="ri-instagram-fill"></i></a>
+                                    <a href="https://wa.me/2348133347164"> <i class="ri-whatsapp-fill"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -517,6 +517,7 @@
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
                                 <p>+234 803 6711 447</p>
+                                <p>+234 813 334 7164</p>
                             </div>
 
                             <iframe src="https://www.google.com/maps/place/Asaba,+Nigeria/@6.2010016,6.6792341,13z/data=!3m1!4b1!4m5!3m4!1s0x104392b2b061bd39:0x749611dbcabe9489!8m2!3d6.2059295!4d6.6958939?hl=en-US" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -588,6 +589,7 @@
                             Delta,<br>
                             Nigeria <br><br>
                             <strong>Phone:</strong> +234 803 6711 447<br>
+                            <strong>Phone:</strong> +234 813 3347 164<br>
                             <strong>Email:</strong> info@lelescoenterprise.com.ng<br>
                         </p>
                     </div>
@@ -618,9 +620,9 @@
                         <p>You can contact us via this</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="https://web.facebook.com/maduka.vivian.96" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.instagram.com/nikkyvee" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="http://wa.me/2348133347164" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
                         </div>
                     </div>
 
@@ -648,7 +650,7 @@
     <div class="row">
 
 
-        <a href="http://wa.me/2348036711447" class="back-to-top d-flex align-items-center justify-content-center"><i class=" bi-whatsapp"></i></a>
+        <a href="http://wa.me/2348133347164" class="back-to-top d-flex align-items-center justify-content-center"><i class=" bi-whatsapp"></i></a>
     </div>
 
 
