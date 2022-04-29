@@ -64,7 +64,7 @@
             </div>
             <div class="form-group">
                 <label class="mb-1"><strong>Confirm-Password</strong></label>
-                <input type="password" name="password_confirmation" class="form-control" value="Confirm-Password">
+                <input type="password" name="confirmed" class="form-control" value="Confirm-Password">
             </div>
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary btn-block">Sign me up</button>
