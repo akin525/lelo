@@ -297,7 +297,7 @@
                                 <span>Chief Executive Officer</span>
                                 <p>The owner of Lelesco Enterprise</p>
                                 <div class="social">
-                                    <a href="http://wa.me/2348036711447"<i class="ri-whatsapp-fill"></i></a>
+                                    <a href="http://wa.me/2348036711447"> <i class="ri-whatsapp-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
                                     <a href=""><i class="ri-instagram-fill"></i></a>
 
