@@ -182,6 +182,16 @@
                                                         {{--                                            <button id="btnv" type="button" onclick="showUser()" class="btn btn-rounded btn-info"> Verify </button>--}}
                                                         {{--                                            <button id="btnd" type="submit" disabled class="btn btn-rounded btn-outline-info"> Continue </button>--}}
                                                         {{--                                            --}}
+                                                        @if(!($data1->plan_id=="airtime"))
+                                                            <div class="form-group">
+                                                                <label for="network" class="text-successrequiredField">
+                                                                    Enter Phone No<span class="asteriskField">*</span>
+                                                                </label>
+                                                                <input class="form-control text-primary" type="tel" placeholder="Enter recipient number" maxlength="11" minlength="11" id="phone" name="number" value="" autocomplete="on" size="20" required="">
+                                                            </div>
+
+                                                            <button type="submit" class="btn btn-rounded btn-outline-info"> Continue </button>
+                                                        @endif
 
                                                         {{--                                            <?php if ($product_type=="nepa") { ?>--}}
 
