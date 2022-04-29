@@ -17,6 +17,11 @@ use App\Models\deposit;
 
 class AuthController
 {
+    public function welcome(Request $request)
+    {
+        return view('welcome', compact('request'));
+    }
+//return redirect("login")->withSuccess('You are not allowed to access');
     public function customLogin(Request $request)
     {
         $request->validate([

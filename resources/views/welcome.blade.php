@@ -52,6 +52,8 @@
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     @auth
+                        <li><a class="nav-link scrollto" href="#">{{Auth::user()->name}}</a></li>
+
                         <li><a class="getstarted scrollto" href="{{url('/dashboard')}}">Dashboard</a></li>
 
                     @else

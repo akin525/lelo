@@ -52,7 +52,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="{{route('dashboard')}}" class="brand-logo">
+        <a href="{{url('/welcome')}}" class="brand-logo">
             <img width="50" src="{{asset('images/dlog.jpeg')}}">
         </a>
 
@@ -143,6 +143,11 @@
                 <p class="email">{{ Auth::user()->email }}</p>
             </div>
             <ul class="metismenu" >
+                <li><a href="{{url('welcome')}}" class="ai-icon">
+                        <i class="flaticon-381-home"></i>
+                        <span class="nav-text">Homepage</span>
+                    </a>
+                </li>
                 <li><a href="{{route('dashboard')}}" class="ai-icon">
                         <i class="flaticon-144-layout"></i>
                         <span class="nav-text">Dashboard</span>

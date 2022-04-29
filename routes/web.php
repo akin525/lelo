@@ -34,6 +34,7 @@ Route::get('/', function () {
 //})->middleware(['auth'])->name('dashboard');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+Route::get('welcome', [AuthController::class, 'welcome'])->name('welcome');
 Route::get('invoice', [AuthController::class, 'invoice'])->name('invoice');
 Route::get('charges', [AuthController::class, 'charges'])->name('charges');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
