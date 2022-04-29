@@ -143,7 +143,7 @@ class ElectController
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_URL => 'https://mobile.primedata.com.ng/api/payelect',
+                    CURLOPT_URL => $resellerURL.'pay',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
@@ -151,9 +151,9 @@ class ElectController
                     CURLOPT_FOLLOWLOCATION => true,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array('refid'=>$request->refid, 'cat_id' => $tv->cat_id, 'number' => $request->number, 'amount' => $request->amount),
+                    CURLOPT_POSTFIELDS => array('service' => 'electricity', 'coded' => $tv->cat_id, 'phone' => $request->number, 'amount' => $request->amount),
                     CURLOPT_HTTPHEADER => array(
-                        'apikey: PRIME6251e00adbc770.70038796'
+                        'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
                     ),
                 ));
 
