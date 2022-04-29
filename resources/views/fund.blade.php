@@ -46,8 +46,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
 
                             <div class="col-xl-6 col-lg-6 col-md-6">
                                 <div class="card">
@@ -92,7 +90,9 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+        </div>
         <!--        <div class="row">-->
         <!--            <div class="col-md-7 grid-margin stretch-card">-->
         <br>
@@ -136,7 +136,7 @@
                 function payWithPaystack(e) {
                     e.preventDefault();
                     let handler = PaystackPop.setup({
-                        key: 'pk_live_26a7ff85db8411cea292289eff4c303c6f1e7341', // Replace with your public key
+                        key: 'pk_live_063a73efe39df28b9581c5bf8dff8f3ae23bf0bf', // Replace with your public key
                         email: document.getElementById("email-address").value,
                         amount: document.getElementById("amount").value * 100,
                         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you

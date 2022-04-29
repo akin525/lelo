@@ -162,12 +162,13 @@ $pla=data::where('plan_id',  $request->network)->get();
                 $user->wallet = $gt;
                 $user->save();
 
-                $resellerURL = 'https://mobile.primedata.com.ng/api/';
+                $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+
 
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
-                    CURLOPT_URL => $resellerURL.'paytv',
+                    CURLOPT_URL => $resellerURL.'pay',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_ENCODING => '',
                     CURLOPT_MAXREDIRS => 10,
@@ -175,9 +176,10 @@ $pla=data::where('plan_id',  $request->network)->get();
                     CURLOPT_FOLLOWLOCATION => true,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array('refid' =>$request->refid,  'coded' => $tv->cat_id, 'number' => $request->number),
+                    CURLOPT_POSTFIELDS => array('service' => 'tv','coded' => $tv->code,'phone' => $request->number),
                     CURLOPT_HTTPHEADER => array(
-                        'apikey: PRIME6251e00adbc770.70038796'
+                        'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
+
                     )
                 ));
 
@@ -187,11 +189,11 @@ $pla=data::where('plan_id',  $request->network)->get();
 //                    echo $response;
 //                return $response;
                 $data = json_decode($response, true);
-//                $success = $data["am"];
-//                $tran1 = $data["discountAmount"];
+//               $success = $data["success"];
+                    $tran1 = $data["discountAmount"];
 
 //                        return $response;
-                if (isset($data['am'])) {
+                if (isset($data['success'])) {
 
                     $bo = bo::create([
                         'username' => $user->username,

@@ -18,6 +18,7 @@ class BillController
 
     public function bill(Request $request)
     {
+//        return $request;
         $request->validate([
             'productid' => 'required',
         ]);
@@ -60,11 +61,11 @@ class BillController
 
                     if ($fg->plan == "airtime") {
 
-                        $resellerURL = 'https://mobile.primedata.com.ng/api/';
+                        $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL =>  $resellerURL . 'bill',
+                            CURLOPT_URL =>  $resellerURL . 'pay',
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,
@@ -74,12 +75,11 @@ class BillController
                             CURLOPT_SSL_VERIFYHOST => 0,
                             CURLOPT_SSL_VERIFYPEER => 0,
                             CURLOPT_CUSTOMREQUEST => 'POST',
-                            CURLOPT_POSTFIELDS => array('id'=>$request->id, 'productid'=>$request->productid, 'service' => 'airtime', 'coded' => $fg->cat_id, 'number' => $request->number, 'amount' => $request->amount, 'reseller_price' => $request->amount),
+                            CURLOPT_POSTFIELDS => array('service' => 'airtime', 'coded' => $fg->cat_id, 'phone' => $request->number, 'amount' => $request->amount, 'reseller_price' => $request->amount),
 
                             CURLOPT_HTTPHEADER => array(
-                                'apikey: PRIME6251e00adbc770.70038796'
+                                'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
                             )));
-
                         $response = curl_exec($curl);
 
                         curl_close($curl);
@@ -133,11 +133,11 @@ class BillController
                     } else {
                         $pop= $fg->amount;
 
-                        $resellerURL = 'https://mobile.primedata.com.ng/api/';
+                        $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
                         $curl = curl_init();
 
                         curl_setopt_array($curl, array(
-                            CURLOPT_URL =>  $resellerURL . 'bill',
+                            CURLOPT_URL =>  $resellerURL . 'pay',
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_ENCODING => '',
                             CURLOPT_MAXREDIRS => 10,
@@ -147,9 +147,11 @@ class BillController
                             CURLOPT_SSL_VERIFYHOST => 0,
                             CURLOPT_SSL_VERIFYPEER => 0,
                             CURLOPT_CUSTOMREQUEST => 'POST',
-                            CURLOPT_POSTFIELDS => array('id'=>$request->id, 'productid'=>$request->productid, 'action' => 'data-topup', 'category_id' => $fg->cat_id, 'plan_id' => $fg->plan_id, 'contact_opt' => '2', 'number' => $request->number, 'amount'=>$pop),
+                            CURLOPT_POSTFIELDS => array('service' => 'data','coded' => $fg->code,'phone' => $request->number),
+
                             CURLOPT_HTTPHEADER => array(
-                                'apikey: PRIME6251e00adbc770.70038796'
+                                'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
+
                             )));
                         $response = curl_exec($curl);
 
