@@ -37,7 +37,7 @@ class VertualController
                 CURLOPT_CUSTOMREQUEST => 'POST',
                 CURLOPT_POSTFIELDS => array('account_name' => $user->username, 'business_short_name' => 'Lelescoenterprise', 'uniqueid' => $user->name, 'email' => $user->email, 'phone' => $user->phone, 'webhook_url' => 'https://Lelescoenterprise.com.ng/api/run',),
                 CURLOPT_HTTPHEADER => array(
-                    'Authorization: mcd_key_tGSkWHl5fJZsJev5FRyB5hT1HutlCa'
+                    'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
                 ),
             ));
 

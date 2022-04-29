@@ -97,6 +97,30 @@
         <!--            <div class="col-md-7 grid-margin stretch-card">-->
         <br>
         <br>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <div class='alert alert-info'>
+                    <button type='button' class='close'></button>
+                    <i class='fa fa-ban-circle'></i><strong>Notification: </br></strong>
+                    <center>
+                        <div class="card-body">
+                            <li  class=" btn-info">
+
+                                @if ($user->account_number==1 && $user->account_name==1)
+                                    <a href='{{route('vertual')}}' class='text-white'>Click this section to get your permament Virtual Bank Account </a>
+                                @else
+                                    <h6 class='text-white'>{{$user->account_name}}</h6>
+                                    <h5 class='text-white'>Account No:{{$user->account_number}}</h5>
+                                    <h6 class='text-white'>WEMA-BANK</h6>
+                                @endif
+
+                            </li>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-12">
