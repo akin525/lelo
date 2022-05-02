@@ -32,8 +32,12 @@ Route::get('/', function () {
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
 //})->middleware(['auth'])->name('dashboard');
+Route::get('changepass', function () {
+    return view('changepass');
+})->name('changepass');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+Route::post('pass', [AuthController::class, 'updatepa'])->name('pass');
 Route::get('welcome', [AuthController::class, 'welcome'])->name('welcome');
 Route::get('invoice', [AuthController::class, 'invoice'])->name('invoice');
 Route::get('charges', [AuthController::class, 'charges'])->name('charges');

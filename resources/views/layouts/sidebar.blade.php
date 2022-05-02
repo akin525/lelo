@@ -153,6 +153,11 @@
                         <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
+                <li><a href="{{route('changepass')}}" class="ai-icon">
+                        <i class="flaticon-006-key"></i>
+                        <span class="nav-text">Change Password</span>
+                    </a>
+                </li>
                 <li><a class="ai-icon" href="{{route('fund')}}" aria-expanded="false">
                         <i class="flaticon-008-credit-card"></i>
                         <span class="nav-text">Fund Wallet</span>
