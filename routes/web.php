@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\ElectController;
 use App\Http\Controllers\FundController;
+use App\Http\Controllers\Updateuser;
 use App\Http\Controllers\VertualController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,8 @@ Route::get('changepass', function () {
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::post('pass', [AuthController::class, 'updatepa'])->name('pass');
+Route::get('update', [Updateuser::class, 'profile'])->name('update');
+Route::post('update2', [Updateuser::class, 'profile1'])->name('update2');
 Route::get('welcome', [AuthController::class, 'welcome'])->name('welcome');
 Route::get('invoice', [AuthController::class, 'invoice'])->name('invoice');
 Route::get('charges', [AuthController::class, 'charges'])->name('charges');
