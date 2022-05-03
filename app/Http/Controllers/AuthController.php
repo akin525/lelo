@@ -55,7 +55,7 @@ $input= $request->all();
         $eti = data::where(['status'=> 1 ])->where('network', '9MOBILE')->skip(0)->take(6)->get();
         $airtel = data::where(['status'=> 1 ])->where('network', 'AIRTEL')->skip(0)->take(6)->get();
 
-
+//return $mtn;
         return view('welcome', compact('mtn', 'glo', 'eti', 'airtel'));
     }
 //return redirect("login")->withSuccess('You are not allowed to access');

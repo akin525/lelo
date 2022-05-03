@@ -345,12 +345,15 @@
                             <h3>MTN Data</h3>
                             <img src="{{asset('assets/img/mtn-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                @foreach($mtn as $mn)
-                                <li><i class="bx bx-check"></i>{{$mn->plan}}</li>
-                                    @endforeach
+                                <li><i class="bx bx-check"></i> 500mb   for   #150</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #300</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #600</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #800</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #1400</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #2500</li>
 
                             </ul>
-                            <a href="{{route('login')}}" class="buy-btn">Get Started</a>
+                            <a href="#" class="buy-btn">Get Started</a>
                         </div>
                     </div>
 
@@ -359,11 +362,14 @@
                             <h3>Airtel Data</h3>
                             <img src="{{asset('assets/img/airtime-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                @foreach($airtel as $ai)
-                                <li><i class="bx bx-check"></i>{{$ai->plan}}</li>
-                                    @endforeach
+                                <li><i class="bx bx-check"></i> 500mb   for   #300</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #600</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #1100</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #1700</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #2500</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #5000</li>
                             </ul>
-                            <a href="{{route('login')}}" class="buy-btn">Get Started</a>
+                            <a href="#" class="buy-btn">Get Started</a>
                         </div>
                     </div>
 
@@ -372,11 +378,14 @@
                             <h3>Glo Data</h3>
                             <img src="{{asset('assets/img/glo-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                @foreach($glo as $gl)
-                                <li><i class="bx bx-check"></i>{{$gl->plan}}</li>
-                                    @endforeach
+                                <li><i class="bx bx-check"></i> 1.35gb   for   #480</li>
+                                <li><i class="bx bx-check"></i> 2.9     for   #950</li>
+                                <li><i class="bx bx-check"></i> 4.1gb   for     #1400</li>
+                                <li><i class="bx bx-check"></i> 5.8gb   for   #1900</li>
+                                <li><i class="bx bx-check"></i> 7.7gb     for   #2400</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #2850</li>
                             </ul>
-                            <a href="{{route('login')}}" class="buy-btn">Get Started</a>
+                            <a href="#" class="buy-btn">Get Started</a>
                         </div>
                     </div>
 
@@ -385,11 +394,14 @@
                             <h3>9mobile Data</h3>
                             <img src="{{asset('assets/img/9mobile-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                @foreach($eti as $mp)
-                                <li><i class="bx bx-check"></i> {{$mo->plan}}</li>
-                                    @endforeach
+                                <li><i class="bx bx-check"></i> 500mb   for   #250</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #500</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #800</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #1050</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #1700</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #3000</li>
                             </ul>
-                            <a href="{{route('login')}}" class="buy-btn">Get Started</a>
+                            <a href="#" class="buy-btn">Get Started</a>
                         </div>
                     </div>
 
