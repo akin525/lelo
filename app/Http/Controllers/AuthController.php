@@ -49,6 +49,7 @@ $input= $request->all();
     }
     public function welcome(Request $request)
     {
+
         $mtn = data::where(['status'=> 1 ])->where('network', 'MTN')->skip(0)->take(6)->get();
         $glo = data::where(['status'=> 1 ])->where('network', 'GLO')->skip(0)->take(6)->get();
         $eti = data::where(['status'=> 1 ])->where('network', '9MOBILE')->skip(0)->take(6)->get();
