@@ -49,7 +49,13 @@ $input= $request->all();
     }
     public function welcome(Request $request)
     {
-        return view('welcome', compact('request'));
+        $mtn = data::where(['status'=> 1 ])->where('network', 'MTN')->skip(0)->take(6)->get();
+        $glo = data::where(['status'=> 1 ])->where('network', 'GLO')->skip(0)->take(6)->get();
+        $eti = data::where(['status'=> 1 ])->where('network', '9MOBILE')->skip(0)->take(6)->get();
+        $airtel = data::where(['status'=> 1 ])->where('network', 'AIRTEL')->skip(0)->take(6)->get();
+
+
+        return view('welcome', compact('mtn', 'glo', 'eti', 'airtel'));
     }
 //return redirect("login")->withSuccess('You are not allowed to access');
     public function customLogin(Request $request)
