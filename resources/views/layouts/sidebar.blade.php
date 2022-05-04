@@ -141,6 +141,10 @@
                 </div>
                 <h5 class="name"><span class="font-w400">Hello,</span> {{ Auth::user()->username }}</h5>
                 <p class="email">{{ Auth::user()->email }}</p>
+                <a class="nav-link bell dz-theme-mode" href="#">
+                    <i id="icon-light" class="fa fa-sun-o"></i>
+                    <i id="icon-dark" class="fa fa-moon-o"></i>
+                </a>
             </div>
             <ul class="metismenu" >
                 <li><a href="{{url('welcome')}}" class="ai-icon">
