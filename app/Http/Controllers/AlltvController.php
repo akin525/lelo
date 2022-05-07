@@ -191,7 +191,7 @@ $pla=data::where('plan_id',  $request->network)->get();
                 $data = json_decode($response, true);
 //               $success = $data["success"];
 
-//                        return $response;
+                        return $response;
                 if (isset($data['success'])) {
                     $tran1 = $data["discountAmount"];
 
