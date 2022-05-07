@@ -137,7 +137,7 @@ $pla=data::where('plan_id',  $request->network)->get();
             $user = User::find($request->user()->id);
             $tv = data::where('id', $request->id)->first();
 
-return $tv;
+//return $tv;
             if ($user->wallet < $tv->tamount) {
                 $mg = "You Cant Make Purchase Above" . "NGN" . $tv->tamount . " from your wallet. Your wallet balance is NGN $user->wallet. Please Fund Wallet And Retry or Pay Online Using Our Alternative Payment Methods.";
 
@@ -176,7 +176,7 @@ return $tv;
                     CURLOPT_FOLLOWLOCATION => true,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array('service' => 'tv','coded' => $tv->plan_id,'phone' => $request->number),
+                    CURLOPT_POSTFIELDS => array('service' => 'tv','coded' => $tv->cat_id,'phone' => $request->number),
                     CURLOPT_HTTPHEADER => array(
                         'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
 
