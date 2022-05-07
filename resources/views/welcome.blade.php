@@ -40,7 +40,7 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="{{url('/welcome')}}"><img src="{{asset('assets/img/logo.png')}}'" class="img-fluid" alt=""></a></h1>
+            <h1 class="logo me-auto"><a href="{{url('/welcome')}}"><img src="{{asset('assets/img/logo.png')}}" class="img-fluid" alt=""></a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -295,7 +295,7 @@
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                             <div class="pic"><img src="{{asset('assets/img/team/team-1.jpg')}}" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Mr Vicent</h4>
+                                <h4>Mr Vincent</h4>
                                 <span>Chief Executive Officer</span>
                                 <p>The owner of Lelesco Enterprise</p>
                                 <div class="social">
