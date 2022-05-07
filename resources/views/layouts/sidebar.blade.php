@@ -52,7 +52,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="{{route('dashboard')}}" class="brand-logo">
+        <a href="{{url('/welcome')}}" class="brand-logo">
             <img width="50" src="{{asset('images/dlog.jpeg')}}">
         </a>
 
@@ -137,15 +137,35 @@
             <div class="main-profile">
                 <div class="image-bx">
                     <img src="{{asset('images/avater.jpg')}}" alt="">
+                    <a class="nav-link bell dz-theme-mode" href="#">
+                        <i id="icon-light" class="fa fa-sun-o"></i>
+                        <i id="icon-dark" class="fa fa-moon-o"></i>
+                    </a>
                     <a href="javascript:void(0);"><i class="fa fa-cog" aria-hidden="true"></i></a>
                 </div>
                 <h5 class="name"><span class="font-w400">Hello,</span> {{ Auth::user()->username }}</h5>
                 <p class="email">{{ Auth::user()->email }}</p>
+
             </div>
             <ul class="metismenu" >
+                <li><a href="{{url('welcome')}}" class="ai-icon">
+                        <i class="flaticon-381-home"></i>
+                        <span class="nav-text">Homepage</span>
+                    </a>
+                </li>
                 <li><a href="{{route('dashboard')}}" class="ai-icon">
                         <i class="flaticon-144-layout"></i>
                         <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li><a href="{{route('changepass')}}" class="ai-icon">
+                        <i class="flaticon-006-key"></i>
+                        <span class="nav-text">Change Password</span>
+                    </a>
+                </li>
+                <li><a href="{{route('update')}}" class="ai-icon">
+                        <i class="flaticon-381-user"></i>
+                        <span class="nav-text">Update Profile</span>
                     </a>
                 </li>
                 <li><a class="ai-icon" href="{{route('fund')}}" aria-expanded="false">

@@ -8,7 +8,7 @@ use App\Models\refer;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use App\Models\wallet;
+use Illuminate\Support\Facades\Hash;
 use App\Models\bo;
 use App\Models\data;
 use App\Models\deposit;
@@ -17,6 +17,48 @@ use App\Models\deposit;
 
 class AuthController
 {
+    public function updatepa(Request $request)
+    {
+        $request->validate([
+            'password' => 'required',
+            'cpassword' => 'required',
+            'fpassword' => 'required',
+        ]);
+        if (Auth::check()) {
+            $user = User::find($request->user()->id);
+$input= $request->all();
+            if ($request->cpassword != $request->fpassword){
+                $mes="New Password not match";
+
+                return view('changepass', compact('mes'));
+
+            }
+            if (!Hash::check($input['password'], $user->password)){
+                $mes= "current-password not match";
+                return view('changepass', compact('mes'));
+
+            } else {
+
+                $user->password =Hash::make($request->fpassword);
+                $user->save();
+                $mes1 = "Password update Successful";
+
+                return view('changepass', compact('mes1'));
+            }
+    }
+    }
+    public function welcome(Request $request)
+    {
+
+        $mtn = data::where(['status'=> 1 ])->where('network', 'MTN')->skip(0)->take(6)->get();
+        $glo = data::where(['status'=> 1 ])->where('network', 'GLO')->skip(0)->take(6)->get();
+        $eti = data::where(['status'=> 1 ])->where('network', '9MOBILE')->skip(0)->take(6)->get();
+        $airtel = data::where(['status'=> 1 ])->where('network', 'AIRTEL')->skip(0)->take(6)->get();
+
+//return $mtn;
+        return view('welcome', compact('mtn', 'glo', 'eti', 'airtel'));
+    }
+//return redirect("login")->withSuccess('You are not allowed to access');
     public function customLogin(Request $request)
     {
         $request->validate([
