@@ -186,14 +186,14 @@ $pla=data::where('plan_id',  $request->network)->get();
                 $response = curl_exec($curl);
 
                 curl_close($curl);
-//                    echo $response;
+                    echo $response;
 //                return $response;
                 $data = json_decode($response, true);
 //               $success = $data["success"];
-                    $tran1 = $data["discountAmount"];
 
 //                        return $response;
                 if (isset($data['success'])) {
+                    $tran1 = $data["discountAmount"];
 
                     $bo = bo::create([
                         'username' => $user->username,
