@@ -137,7 +137,7 @@ $pla=data::where('plan_id',  $request->network)->get();
             $user = User::find($request->user()->id);
             $tv = data::where('id', $request->id)->first();
 
-//return $tv;
+return $tv;
             if ($user->wallet < $tv->tamount) {
                 $mg = "You Cant Make Purchase Above" . "NGN" . $tv->tamount . " from your wallet. Your wallet balance is NGN $user->wallet. Please Fund Wallet And Retry or Pay Online Using Our Alternative Payment Methods.";
 
