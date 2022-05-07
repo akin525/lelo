@@ -186,7 +186,7 @@ $pla=data::where('plan_id',  $request->network)->get();
                 $response = curl_exec($curl);
 
                 curl_close($curl);
-                    echo $response;
+//                    echo $response;
 //                return $response;
                 $data = json_decode($response, true);
 //               $success = $data["success"];
