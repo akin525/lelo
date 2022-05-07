@@ -176,7 +176,7 @@ $pla=data::where('plan_id',  $request->network)->get();
                     CURLOPT_FOLLOWLOCATION => true,
                     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                     CURLOPT_CUSTOMREQUEST => 'POST',
-                    CURLOPT_POSTFIELDS => array('service' => 'tv','coded' => $tv->code,'phone' => $request->number),
+                    CURLOPT_POSTFIELDS => array('service' => 'tv','coded' => $tv->plan_id,'phone' => $request->number),
                     CURLOPT_HTTPHEADER => array(
                         'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
 
@@ -191,7 +191,7 @@ $pla=data::where('plan_id',  $request->network)->get();
                 $data = json_decode($response, true);
 //               $success = $data["success"];
 
-                        return $response;
+//                        return $response;
                 if (isset($data['success'])) {
                     $tran1 = $data["discountAmount"];
 
