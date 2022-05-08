@@ -346,10 +346,10 @@
                             <img src="{{asset('assets/img/mtn-1.png')}}" class="img-fluid" alt="">
                             <ul>
                                 <li><i class="bx bx-check"></i> 500mb   for   #150</li>
-                                <li><i class="bx bx-check"></i> 1gb     for   #300</li>
-                                <li><i class="bx bx-check"></i> 2gb   for     #600</li>
-                                <li><i class="bx bx-check"></i> 3gb   for   #800</li>
-                                <li><i class="bx bx-check"></i> 5gb     for   #1400</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #250</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #500</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #750</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #1250</li>
                                 <li><i class="bx bx-check"></i> 10gb   for     #2500</li>
 
                             </ul>
@@ -362,12 +362,12 @@
                             <h3>Airtel Data</h3>
                             <img src="{{asset('assets/img/airtime-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                <li><i class="bx bx-check"></i> 500mb   for   #300</li>
-                                <li><i class="bx bx-check"></i> 1gb     for   #600</li>
-                                <li><i class="bx bx-check"></i> 2gb   for     #1100</li>
-                                <li><i class="bx bx-check"></i> 3gb   for   #1700</li>
-                                <li><i class="bx bx-check"></i> 5gb     for   #2500</li>
-                                <li><i class="bx bx-check"></i> 10gb   for     #5000</li>
+                                <li><i class="bx bx-check"></i> 500mb   for   #250</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #500</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #900</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #1500</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #2300</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #4800</li>
                             </ul>
                             <a href="#" class="buy-btn">Get Started</a>
                         </div>
@@ -394,12 +394,13 @@
                             <h3>9mobile Data</h3>
                             <img src="{{asset('assets/img/9mobile-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                <li><i class="bx bx-check"></i> 500mb   for   #250</li>
-                                <li><i class="bx bx-check"></i> 1gb     for   #500</li>
-                                <li><i class="bx bx-check"></i> 2gb   for     #800</li>
-                                <li><i class="bx bx-check"></i> 3gb   for   #1050</li>
-                                <li><i class="bx bx-check"></i> 5gb     for   #1700</li>
-                                <li><i class="bx bx-check"></i> 10gb   for     #3000</li>
+                                <li><i class="bx bx-check"></i> 500mb   for   #600</li>
+                                <li><i class="bx bx-check"></i> 1.5gb     for   #1100</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #1300</li>
+                                <li><i class="bx bx-check"></i> 4.5gb   for     #2100</li>
+                                <li><i class="bx bx-check"></i> 11gb   for   #4100</li>
+                                <li><i class="bx bx-check"></i> 15gb     for   #5100</li>
+
                             </ul>
                             <a href="#" class="buy-btn">Get Started</a>
                         </div>
