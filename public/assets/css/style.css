@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -949,84 +949,177 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team .member {
-  position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  border-radius: 5px;
-  background: #fff;
-  transition: 0.5s;
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s;
 }
 .team .member .pic {
-  overflow: hidden;
-  width: 180px;
-  border-radius: 50%;
+    overflow: hidden;
+    width: 180px;
+    border-radius: 50%;
 }
 .team .member .pic img {
-  transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s;
 }
 .team .member:hover {
-  transform: translateY(-10px);
+    transform: translateY(-10px);
 }
 .team .member .member-info {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 .team .member h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: #c3211c;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #491110;
 }
 .team .member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
 }
 .team .member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #cbd6e9;
-  bottom: 0;
-  left: 0;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #cbd6e9;
+    bottom: 0;
+    left: 0;
 }
 .team .member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
+    margin: 10px 0 0 0;
+    font-size: 14px;
 }
 .team .member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .team .member .social a {
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 32px;
-  height: 32px;
-  background: #eff2f8;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background: #eff2f8;
 }
 .team .member .social a i {
-  color: #c3211c;
-  font-size: 16px;
-  margin: 0 2px;
+    color: #491110;
+    font-size: 16px;
+    margin: 0 2px;
 }
 .team .member .social a:hover {
-  background: #511411;
+    background: #C3211c;
 }
 .team .member .social a:hover i {
-  color: #fff;
+    color: #fff;
 }
 .team .member .social a + a {
-  margin-left: 8px;
+    margin-left: 8px;
 }
+
+
+/*--------------------------------------------------------------
+# Team1
+--------------------------------------------------------------*/
+.team1{
+    background: url("../img/team-bg.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+}
+.team1::before1 {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 9;
+}
+.team1.container1 {
+    position: relative;
+    z-index: 10;
+}
+.team1 .member1 {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+.team1 .member1 .pic1{
+    overflow: hidden;
+}
+.team1 .member1 .member-info1 {
+    position: absolute;
+    top: 85%;
+    left: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 20px 0;
+    color: #364146;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    max-height: 95px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.team1 .member1:hover .member-info1 {
+    max-height: 300px;
+}
+.team1 .member1 h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #364146;
+    position: relative;
+    padding-bottom: 10px;
+}
+.team1 .member1 h4::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #b5c1c6;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+.team1 .member1 span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+}
+.team1 .member1 .social {
+    margin-top: 15px;
+}
+.team1 .member1 .social a {
+    transition: color 0.3s;
+    color: #627680;
+}
+.team1 .member1 .social a:hover {
+    color: #009cea;
+}
+.team1 .member1 .social i {
+    font-size: 16px;
+    margin: 0 2px;
+}
+@media (max-width: 992px) {
+    .team1 .member1 {
+        margin-bottom: 110px;
+    }
+}
+
+
 
 /*--------------------------------------------------------------
 # Pricing

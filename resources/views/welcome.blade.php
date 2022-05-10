@@ -262,6 +262,56 @@
             </div>
         </section><!-- End Services Section -->
 
+
+        <!-- ======= Team1 Section ======= -->
+        <section id="team1" class="team1">
+            <div class="container card">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Reseller Plan</h2>
+                    <p>You can Partner with us, you can have your own platform whereby you sell data, airtime, Electricity and cable TV and others</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" >
+                        <div class="member1" data-aos="full">
+                            <div class="pic1"><img width="300" src="{{asset('assets/img/team/team-4.jpg')}}" class="img-fluid" alt=""></div>
+                            <div class="member-info1">
+                                <a class="btn btn-success" href="https://wa.me/2347011223737/?text=i want to be a reseller from Lelesco Enterprise,  i want small scales ">Select</a>
+                                <span>Enjoy Your Plan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="member1" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="pic1"><img width="300" src="{{asset('assets/img/team/team-5.jpg')}}" class="img-fluid" alt=""></div>
+                            <div class="member-info1">
+                                <a class="btn btn-success" href="https://wa.me/2347011223737/?text=i want to be a reseller from Lelesco Enterprise,  i want medium scales">Select</a>
+                                <span>Enjoy Your Plan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" >
+                        <div class="member1" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="pic1"><img width="300" src="{{asset('assets/img/team/team-6.jpg')}}" class="img-fluid" alt=""></div>
+                            <div class="member-info1">
+                                <a class="btn btn-success" href="https://wa.me/2347011223737/?text=i want to be a reseller from Lelesco Enterprise,  i want full scales with Licenses">Select</a>
+                                <span>Enjoy Your Plan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+
+
+
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
             <div class="container" data-aos="zoom-in">
