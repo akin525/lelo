@@ -395,12 +395,12 @@
                             <h3>MTN Data</h3>
                             <img src="{{asset('assets/img/mtn-1.png')}}" class="img-fluid" alt="">
                             <ul>
-                                <li><i class="bx bx-check"></i> 500mb   for   #150</li>
-                                <li><i class="bx bx-check"></i> 1gb     for   #250</li>
-                                <li><i class="bx bx-check"></i> 2gb   for     #500</li>
-                                <li><i class="bx bx-check"></i> 3gb   for   #750</li>
-                                <li><i class="bx bx-check"></i> 5gb     for   #1250</li>
-                                <li><i class="bx bx-check"></i> 10gb   for     #2500</li>
+                                <li><i class="bx bx-check"></i> 500mb   for   #130</li>
+                                <li><i class="bx bx-check"></i> 1gb     for   #230</li>
+                                <li><i class="bx bx-check"></i> 2gb   for     #460</li>
+                                <li><i class="bx bx-check"></i> 3gb   for   #690</li>
+                                <li><i class="bx bx-check"></i> 5gb     for   #1150</li>
+                                <li><i class="bx bx-check"></i> 10gb   for     #2300</li>
 
                             </ul>
                             <a href="#" class="buy-btn">Get Started</a>
