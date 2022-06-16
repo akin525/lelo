@@ -20,15 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    if (Auth()->user()) {
-        return redirect(route('dashboard'))
-            ->withSuccess('Signed in');
-
-    }else {
-        return view('welcome');
-    }
-});
+//Route::get('/', function () {
+//    if (Auth()->user()) {
+//        return redirect(route('dashboard'))
+//            ->withSuccess('Signed in');
+//
+//    }else {
+//        return view('welcome');
+//    }
+//});
 
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
@@ -41,7 +41,7 @@ Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard')
 Route::post('pass', [AuthController::class, 'updatepa'])->name('pass');
 Route::get('update', [Updateuser::class, 'profile'])->name('update');
 Route::post('update2', [Updateuser::class, 'profile1'])->name('update2');
-Route::get('welcome', [AuthController::class, 'welcome'])->name('welcome');
+Route::get('/', [AuthController::class, 'welcome'])->name('welcome');
 Route::get('invoice', [AuthController::class, 'invoice'])->name('invoice');
 Route::get('charges', [AuthController::class, 'charges'])->name('charges');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
