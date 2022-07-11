@@ -20,11 +20,12 @@
     <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+{{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
+@include('sweetalert::alert')
 
 <body class="vh-100">
 <div class="authincation h-100">
@@ -51,21 +52,32 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 </center>
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
+                                <center>
+                                    <a href="{{route('login')}}" class="btn btn-primary ">Login</a>
+                                </center>
+                                <br>
+                                <form method="POST" action="{{ route('pass1') }}">
+                                    @csrf
+                                    <fieldset>
+                                        @if(session('error'))
+                                            <div class="alert alert-danger">
+                                                {{session('error')}}
+                                            </div>
+                                        @endif
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Email Password Reset Link') }}
-                </x-button>
-            </div>
+                                        @if(session('success'))
+                                            <div class="alert alert-success">
+                                                {{session('success')}}
+                                            </div>
+                                        @endif
+                                        <div class="field">
+                                            <label class="label_field">Email</label>
+                                            <input id="email" class="form-control" type="email" name="email"  required autofocus />
+                                        </div>
+                                            <br>
+                                        <center>
+                <button type="submit" class="btn btn-primary btn-block" >Get Password</button>
+                                        </center>
         </form>
                             </div>
                         </div>

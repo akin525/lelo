@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Emailpass;
 use App\Models\charp;
 use App\Models\Messages;
 use App\Models\refer;
@@ -12,11 +13,41 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\bo;
 use App\Models\data;
 use App\Models\deposit;
-
+use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class AuthController
 {
+    public function pass1(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if (!isset($user)){
+            Alert::error('Error', 'Email not found in our system');
+            return back();
+
+        }elseif ($user->email == $request->email){
+            $new['pass']=uniqid('Pass',true);
+
+            $user->password=Hash::make( $new['pass']);
+            $user->save();
+
+            $admin= 'info@lelescoenterprise.com.ng';
+            $new['user']=$user->username;
+
+            $receiver= $request->email;
+            Mail::to($receiver)->send(new Emailpass($new));
+            Mail::to($admin)->send(new Emailpass($new ));
+            Alert::success('Success', 'New Password has been sent to your email');
+            return back();
+        }
+    }
+
     public function updatepa(Request $request)
     {
         $request->validate([
