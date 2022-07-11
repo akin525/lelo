@@ -23,7 +23,7 @@
 {{--    <link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 </head>
 @include('sweetalert::alert')
 
@@ -45,13 +45,6 @@
                                 <div class="mb-4 text-sm text-gray-600">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>
-<center>
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-</center>
                                 <center>
                                     <a href="{{route('login')}}" class="btn btn-primary ">Login</a>
                                 </center>

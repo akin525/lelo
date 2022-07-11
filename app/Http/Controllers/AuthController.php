@@ -29,7 +29,7 @@ class AuthController
 
         if (!isset($user)){
             Alert::error('Error', 'Email not found in our system');
-            return back();
+            return redirect('forgot-password')->with('error', 'Email not found in our system');
 
         }elseif ($user->email == $request->email){
             $new['pass']=uniqid('Pass',true);
@@ -40,11 +40,11 @@ class AuthController
             $admin= 'info@lelescoenterprise.com.ng';
             $new['user']=$user->username;
 
-            $receiver= $request->email;
+            $receiver= $user->email;
             Mail::to($receiver)->send(new Emailpass($new));
             Mail::to($admin)->send(new Emailpass($new ));
             Alert::success('Success', 'New Password has been sent to your email');
-            return back();
+            return redirect('forgot-password')->with('success', 'New Password has been sent to your email');
         }
     }
 
