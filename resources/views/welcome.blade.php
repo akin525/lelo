@@ -57,7 +57,7 @@
                         <li><a class="getstarted scrollto" href="{{url('/dashboard')}}">Dashboard</a></li>
 
                     @else
-                        <li><a class="getstarted scrollto" href="{{route('register')}}">Sing Up</a></li>
+                        <li><a class="getstarted scrollto" href="{{route('register')}}">Sign Up</a></li>
 
                     @endauth
 

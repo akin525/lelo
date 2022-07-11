@@ -6,45 +6,57 @@
     <div style="padding:90px 15px 20px 15px">
         <h4 class="align-content-center text-sm-center">Airtime TopUp</h4>
         <div class="card">
+
             <div class="card-body">
                 <!--            <div class="box w3-card-4">-->
 
-                <form action="{{ route('pre') }}" method="post">
+                <form action="{{route('time')}}" method="post">
                     @csrf
+                    <script>
+                        $(document).ready(function() {
+                            toastr.options.timeOut = 60000;
+                            @if (Session::has('error'))
+                            toastr.error('{{ Session::get('error') }}');
+                            @elseif(Session::has('success'))
+                            toastr.success('{{ Session::get('success') }}');
+                            @endif
+                        });
+
+                    </script>
                     <div class="row">
+
                         <div class="col-sm-8">
+                            <x-auth-validation-errors class="alert-danger text-danger" :errors="$errors" />
+
                             <br>
                             <br>
                             <div id="AirtimeNote" class="alert alert-danger" style="text-transform: uppercase;font-weight: bold;font-size: 23px;display: none;"></div>
                             <div id="AirtimePanel">
 
-                                <div id="div_id_airtimetype" class="form-group">
-                                    <label for="airtimetype_a" class=" requiredField">
-                                        Airtime Type<span class="asteriskField">*</span>
-                                    </label>
-                                    <div class="form-group">
-                                        <select name="airtimetype" class="text-success form-control" required="" id="airtimetype">
-                                            <option value="" selected="">---------</option>
-
-                                            <option value="VTU">AIRTIME VTU TOP-UP</option>
-
-                                        </select>
-                                    </div>
-                                </div>
                                 <div id="div_id_network" class="form-group">
                                     <label for="network" class=" requiredField">
                                         Network<span class="asteriskField">*</span>
                                     </label>
                                     <div class="">
                                         <select name="id" class="text-success form-control" required="">
-                                            @foreach($data as $datas)
-                                                <option value="" selected="">---------</option>
-
-                                                <option value="{{$datas->id}}">{{$datas->network}} </option>
-                                            @endforeach
+                                       <option value="m">MTN</option>
+                                       <option value="g">GLO</option>
+                                       <option value="a">AIRTEL</option>
+                                       <option value="9">9MOBILE</option>
                                         </select>
                                     </div>
                                 </div>
+                                <label for="network" class=" requiredField">
+                                    Phone No<span class="asteriskField">*</span>
+                                </label>
+                                <input type="number" minlength="11" maxlength="11"  class="form-control"  name="number" required/>
+
+                                <label for="network" class=" requiredField">
+                                    Amount<span class="asteriskField">*</span>
+                                </label>
+                                <input type="number" min="100" max="1000" class="form-control"  name="amount" required/>
+                                <input type="hidden"  class="form-control"  name="refid" value="{{rand(11111111, 999999999)}}" required/>
+
                                 <button type="submit" class=" btn" style="color: white;background-color: #095b26" id="btnsubmit"> Purchase Now</button>
                             </div>
                         </div>

@@ -24,6 +24,8 @@
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
     <link href="v{{asset('endor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    {{-- toastr --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
 
 
 </head>
@@ -214,7 +216,7 @@
         Sidebar end
     ***********************************-->
 
-
+    @include('sweetalert::alert')
 
 
 
@@ -279,6 +281,14 @@
     <script src="{{asset('js/deznav-init.js')}}"></script>
     <script src="{{asset('js/demo.j')}}s"></script>
     <script src="{{asset('js/styleSwitcher.js')}}"></script>
+
+
+    {{-- toastr js --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+
+
+
 </body>
 
 <!-- Mirrored from d22roh5inpczgk.cloudfront.net/xhtml/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Apr 2022 22:18:44 GMT -->

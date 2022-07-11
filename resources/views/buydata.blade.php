@@ -1,55 +1,80 @@
 @include('layouts.sidebar')
 <div class="content-body">
     <div class="container-fluid">
-
-<div class="row">
+        <div class="row">
+            <!--    <div class="card">-->
+            <div class="card-body">
+                <div class="module-head">
+                    <center><h3>
+                            Select Network</h3></center>
+                </div>
+                <div class="row">
     <!--    <div class="card">-->
     <div class="card-body">
         <div class="module-head">
-            <h3>
-                Buy Data</h3>
+            <center><h3>
+                    Buy Data</h3></center>
         </div>
         <center>
+            <script>
+                function myNewFunction(sel) {
+                    // alert(sel.options[sel.selectedIndex].id);
+                    document.getElementById("po").value = (sel.options[sel.selectedIndex].id);
+                    document.getElementById("pk").value = (sel.options[sel.selectedIndex].text);
+                }
+            </script>
             <div class="btn-controls">
-                <form action="{{ route('pre') }}" method="post">
+                <form action="{{ route('data') }}" method="post">
                     @csrf
                     <label for="network" class=" requiredField">
-                        Choose Network<span class="asteriskField">*</span>
+                        Select Network from the Rectangular Box<span class="asteriskField">*</span>
                     </label>
-                    <select  name="id" class="text-success form-control" required="">
-                        <option value="">---------</option>
+                    <select  name="productid" class="text-success form-control" onChange="myNewFunction(this);" required="">
+                        <option>-------</option>
                         @foreach($data as $datas)
-
-                                <option value="{{$datas->id}}">{{$datas->network}}{{$datas->plan}}{{$datas->tamount}}
-                                </option>
-                                @endforeach
+                            <option value="{{$datas->id}}" id="{{$datas->tamount}}" >{{$datas->network}}{{$datas->plan}}
+                            </option>
+                        @endforeach
 
                     </select>
-                    <button type="submit" class=" btn" style="color: white;background-color: #095b0d"> Next</button>
-                </form>
-        </center>
-        <h4 class="btn-info">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-success">MTN [SME]     *461*4#  </li>
-                <li class="list-group-item list-group-item-primary">MTN [Gifting]     *131*4# or *460*260#  </li>
-                <li class="list-group-item list-group-item-dark"> 9mobile [Gifting]   *228# </li>
-                <li class="list-group-item list-group-item-danger"> Airtel   *140# </li>
-                <li class="list-group-item list-group-item-success"> Glo  *127*0#. </li>
-            </ul>
+                    <br>
+                    <label for="network" class=" requiredField">
+                        Amount<span class="asteriskField">*</span>
+                    </label>
+                    <input name="amount" class="text-success form-control" value="" placeholder="Amount" id="po" readonly>
+                    <br>
+                    <input type="hidden" name="id" value="<?php echo rand(10000000, 999999999); ?>">
 
-        </h4>
+                    <label for="network" class=" requiredField">
+                        Enter Phone no<span class="asteriskField">*</span>
+                    </label>
+                    <input type="number" name="number" class="form-control" required>
+                    <br>
+                    <button type="submit" class=" btn" style="color: white;background-color: #28a745">Buy Now</button>
+                </form>
+            </div>
+        </center>
         <br>
 
 
+
+        <p>You can use the codes below to check your Data Balance!  </p>
+
+        <h6>
+            <ul>
+                <li class="list-group-item-info"> MTN [SME] *461*4# or *556#</li>
+                <li class="list-group-item-danger">MTN [CG] *131*4# or *460*260#</li>
+                <li class="list-group-item-success">9mobile [Gifting] *228#</li>
+                <li class="list-group-item-info">Airtel *140#</li>
+                <li class="list-group-item-primary">Glo *127*0#</li>
+            </ul>
+        </h6>
+
+
+
+        <br>
         <br>
     </div>
 </div>
 </div>
 </center>
-    <!-- Datatable -->
-    <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
-    <script src="{{asset('js/custom.min.js')}}"></script>
-    <script src="{{asset('js/deznav-init.js')}}"></script>
-    <script src="{{asset('js/demo.j')}}s"></script>
-    <script src="{{asset('js/styleSwitcher.js')}}"></script>
