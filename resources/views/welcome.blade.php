@@ -690,8 +690,7 @@
     <div id="preloader"></div>
     <div class="row">
 
-
-        <a href="http://wa.me/2348133347164" class="back-to-top d-flex align-items-center justify-content-center"><i class=" bi-whatsapp"></i></a>
+        <a href="http://wa.me/2348036711447" class="back-to-top d-flex align-items-center justify-content-center"><i class=" bi-whatsapp"></i></a>
     </div>
 
 

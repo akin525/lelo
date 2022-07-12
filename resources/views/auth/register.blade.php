@@ -60,11 +60,12 @@
             </div>
             <div class="form-group">
                 <label class="mb-1"><strong>Password</strong></label>
-                <input type="password" name="password" class="form-control" value="Password">
+                <input type="password" name="password" class="form-control " value="Password">
             </div>
             <div class="form-group">
                 <label class="mb-1"><strong>Confirm-Password</strong></label>
                 <input type="password" name="password_confirmation" class="form-control" value="Confirm-Password">
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
             </div>
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary btn-block">Sign me up</button>
@@ -80,4 +81,28 @@
             </div>
         </div>
     </div>
+    <style>
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index:100;
+        }
+
+        .my-float{
+            margin-top:16px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/2348036711447" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 </div>
