@@ -38,7 +38,7 @@
                                                 <span class="asteriskField">*</span>
                                             </label>
                                             <div class="">
-                                                <input class="form-control text-success" type="tel" placeholder="Enter IUC number" maxlength="11" minlength="9" id="tvphone" name="phone" value="" autocomplete="on" size="20" required="">
+                                                <input class="form-control text-success" type="number" placeholder="Enter IUC number" maxlength="11" minlength="9" id="tvphone" name="phone" value="" autocomplete="on" size="20" required="">
                                             </div>
                                     </div>
                                     {{--                                        <button id="btnv" type="button" onclick="showUser()" class="btn btn-rounded btn-success"> Verify </button>--}}
