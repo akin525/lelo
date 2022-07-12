@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@include('sweetalert::alert')
+    <!DOCTYPE html>
 <html lang="en" class="h-100">
 
 
@@ -25,7 +26,6 @@
     <!-- Scripts -->
 {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 </head>
-@include('sweetalert::alert')
 
 <body class="vh-100">
 <div class="authincation h-100">
