@@ -50,15 +50,15 @@ class RegisteredUserController extends Controller
             'phone' => $request->number,
             'password' => Hash::make($request->password),
         ]);
+
+        event(new Registered($user));
+
+        Auth::login($user);
         $input=$request;
         $receiver=$input['email'];
         $admin="info@lelescoenterprise.com.ng";
         Mail::to($receiver)->send(new Emailotp($input));
         Mail::to($admin)->send(new Emailotp($input));
-        event(new Registered($user));
-
-        Auth::login($user);
-
         return redirect(RouteServiceProvider::HOME);
     }
 }
