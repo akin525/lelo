@@ -9,6 +9,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
@@ -48,7 +49,11 @@ class RegisteredUserController extends Controller
             'phone' => $request->number,
             'password' => Hash::make($request->password),
         ]);
-
+        $input=$request;
+        $receiver=$input['email'];
+        $admin="info@lelescoenterprise.com.ng";
+        Mail::to($receiver)->send(new Emailotp($input));
+        Mail::to($admin)->send(new Emailotp($input));
         event(new Registered($user));
 
         Auth::login($user);
