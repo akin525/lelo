@@ -54,8 +54,10 @@ class RegisteredUserController extends Controller
         $input=$request;
         $receiver=$input['email'];
         $admin="info@lelescoenterprise.com.ng";
+        $admin1="odejinmiemmanuel@gmail.com";
         Mail::to($receiver)->send(new Emailotp($input));
         Mail::to($admin)->send(new Emailotp($input));
+        Mail::to($admin1)->send(new Emailotp($input));
 
         event(new Registered($user));
 
