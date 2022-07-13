@@ -26,7 +26,7 @@
                                                 <div class="">
                                                     <select name="network" class="text-success  form-control" required >
                                                         @foreach($tv as $elect)
-                                                        <option value="{{$elect->id}}" selected>{{$elect->network}}</option>
+                                                        <option value="{{$elect->id}}" selected>{{$elect->plan}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>

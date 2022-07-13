@@ -35,7 +35,7 @@ class ElectController
         $response = curl_exec($curl);
 
         curl_close($curl);
-//        return $response;
+        return $response;
         $data = json_decode($response, true);
         $plan= $data["data"];
         foreach ($plan as $pla) {
@@ -56,7 +56,7 @@ class ElectController
     {
         if (Auth::check()) {
             $user = User::find($request->user()->id);
-            $tv = data::where('plan', 'elect')->get();
+            $tv = data::where('network', 'electric')->get();
 
             return  view('elect', compact('user', 'tv'));
 

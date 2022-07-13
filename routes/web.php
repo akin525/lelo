@@ -37,9 +37,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('changepass', function () {
     return view('changepass');
 })->name('changepass');
-
-Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::post('pass1', [AuthController::class, 'pass1'])->name('pass1');
+
+Route::middleware(['auth'])->group(function () {
+Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::post('pass', [AuthController::class, 'updatepa'])->name('pass');
 Route::get('update', [Updateuser::class, 'profile'])->name('update');
 Route::post('update2', [Updateuser::class, 'profile1'])->name('update2');
@@ -71,5 +72,5 @@ Route::post('bill', [BillController::class, 'bill'])->name('bill');
 Route::get('fund', [FundController::class, 'fund'])->name('fund');
 Route::get('tran/{reference}', [FundController::class, 'tran'])->name('tran');
 Route::get('vertual', [VertualController::class, 'vertual'])->name('vertual');
-
+});
 require __DIR__.'/auth.php';
