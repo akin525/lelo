@@ -9,14 +9,12 @@
     <meta name="author" content="" />
     <meta name="robots" content="" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Buy Data, Airtime, Pay TV, Pay Electricity Conveniently!" />
-    <meta property="og:title" content="Zenix - Crypto Admin Dashboard" />
-    <meta property="og:description" content="Zenix - Crypto Admin Dashboard" />
-    <meta property="og:image" content="../../zenix.dexignzone.com/xhtml/social-image.png" />
+    <meta content="Lelescoenterprise | Buy data in a few clicks to keep surfing the internet. You can buy whatever size of data plan for whichever network you desire. All plans are topped-up to your specified number in seconds." name="description">
+    <meta property="og:image" content="https://lelescoenterprise.com.ng/images/dlog.jpeg" />
     <meta name="format-detection" content="telephone=no">
     <title>Lelescoenterprise</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/dlog.jpeg')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://lelescoenterprise.com.ng/images/dlog.jpeg">
     <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 

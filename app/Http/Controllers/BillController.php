@@ -184,7 +184,7 @@ Alert::error('Error', $am. ' '.$ph);
                 CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_SSL_VERIFYPEER => 0,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => array('service' => 'data', 'coded' => $bt->code, 'phone' => $request->number),
+                CURLOPT_POSTFIELDS => array('service' => 'data', 'coded' => $bt->code, 'phone' => $request->number, 'reseller_price' => $bt->tamount),
 
                 CURLOPT_HTTPHEADER => array(
                     'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
