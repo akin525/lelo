@@ -162,7 +162,7 @@ Alert::error('Error', $am. ' '.$ph);
             $user = User::find($request->user()->id);
             $bt = data::where("id", $request->productid)->first();
 //                $wallet = wallet::where('username', $user->username)->first();
-
+//return $bt;
             $gt = $user->wallet - $request->amount;
 
 

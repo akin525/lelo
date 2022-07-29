@@ -10,9 +10,9 @@
     <meta name="robots" content="" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta content="Lelescoenterprise | Buy data in a few clicks to keep surfing the internet. You can buy whatever size of data plan for whichever network you desire. All plans are topped-up to your specified number in seconds." name="description">
-    <meta property="og:image" content="https://lelescoenterprise.com.ng/images/dlog.jpeg" />
+    <meta property="og:image" content="https ://lelescoenterprise.com.ng/images/dlog.jpeg" />
     <meta name="format-detection" content="telephone=no">
-    <title>Lelescoenterprise</title>
+    <title> Lelescoenterprise </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://lelescoenterprise.com.ng/images/dlog.jpeg">
     <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
