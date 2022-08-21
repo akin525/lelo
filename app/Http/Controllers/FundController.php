@@ -73,7 +73,7 @@ class FundController
 //        return $response;
         $data=json_decode($response, true);
         $amount=$data["data"]["amount"]/100;
-        $auth=$data["data"]["authorization"]["authorization_code"];
+//        $auth=$data["data"]["authorization"]["authorization_code"];
 // echo $auth;
 
         if(Auth::check()) {
