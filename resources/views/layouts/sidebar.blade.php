@@ -51,7 +51,7 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="{{url('/welcome')}}" class="brand-logo">
+        <a href="{{route('welcome')}}" class="brand-logo">
             <img width="50" src="{{asset('images/dlog.jpeg')}}">
         </a>
 

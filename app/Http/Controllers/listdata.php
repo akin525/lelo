@@ -13,7 +13,7 @@ class listdata
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://app.mcd.5starcompany.com.ng/api/reseller/list',
+            CURLOPT_URL => 'https://integration.mcd.5starcompany.com.ng/api/reseller/list',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,

@@ -164,7 +164,7 @@ class AlltvController
                     $wallet->balance = $gt;
                     $wallet->save();
 
-                    $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+                    $resellerURL = 'https://integration.mcd.5starcompany.com.ng/api/reseller/';
 
                     $curl = curl_init();
 

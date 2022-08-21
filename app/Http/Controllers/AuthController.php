@@ -81,10 +81,10 @@ $input= $request->all();
     public function welcome(Request $request)
     {
 
-        $mtn = data::where(['status'=> 1 ])->where('network', 'MTN')->skip(0)->take(6)->get();
-        $glo = data::where(['status'=> 1 ])->where('network', 'GLO')->skip(0)->take(6)->get();
-        $eti = data::where(['status'=> 1 ])->where('network', '9MOBILE')->skip(0)->take(6)->get();
-        $airtel = data::where(['status'=> 1 ])->where('network', 'AIRTEL')->skip(0)->take(6)->get();
+        $mtn = data::where(['status'=> 1 ])->where('network', 'mtn-data')->skip(0)->take(6)->get();
+        $glo = data::where(['status'=> 1 ])->where('network', 'glo-data')->skip(0)->take(6)->get();
+        $eti = data::where(['status'=> 1 ])->where('network', 'etisalat-data')->skip(0)->take(6)->get();
+        $airtel = data::where(['status'=> 1 ])->where('network', 'airtel-data')->skip(0)->take(6)->get();
 
 //return $mtn;
         return view('welcome', compact('mtn', 'glo', 'eti', 'airtel'));

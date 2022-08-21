@@ -61,7 +61,7 @@ Alert::toast($mg, 'error');
                 $user->save();
 
 
-                $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+                $resellerURL = 'https://integration.mcd.5starcompany.com.ng/api/reseller/';
                 $curl = curl_init();
 
                 curl_setopt_array($curl, array(
@@ -173,7 +173,7 @@ Alert::error('Error', $am. ' '.$ph);
             $user->save();
 
 
-            $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+            $resellerURL = 'https://integration.mcd.5starcompany.com.ng/api/reseller/';
             $curl = curl_init();
 
             curl_setopt_array($curl, array(

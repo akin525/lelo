@@ -67,7 +67,7 @@ class AlltvController
 //        return $request;
 $pla=data::where('network',  $request->network)->get();
 //return $ve;
-        $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+        $resellerURL = 'https://integration.mcd.5starcompany.com.ng/api/reseller/';
 
         $curl = curl_init();
 
@@ -163,7 +163,7 @@ Alert::error('error', $mg);
                 $user->wallet = $gt;
                 $user->save();
 
-                $resellerURL = 'https://app.mcd.5starcompany.com.ng/api/reseller/';
+                $resellerURL = 'https://integration.mcd.5starcompany.com.ng/api/reseller/';
 
 
                 $curl = curl_init();
