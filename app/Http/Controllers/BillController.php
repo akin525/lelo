@@ -31,20 +31,23 @@ class BillController
 
             if ($user->wallet < $request->amount) {
                 $mg = "You Cant Make Purchase Above" . "NGN" . $request->amount . " from your wallet. Your wallet balance is NGN $user->wallet. Please Fund Wallet And Retry or Pay Online Using Our Alternative Payment Methods.";
-Alert::success('Error', $mg);
+Alert::toast($mg, 'error');
                 return back();
 
             }
             if ($request->amount < 0) {
 
                 $mg = "error transaction";
-                return view('bill', compact('user', 'mg'));
+                Alert::toast($mg, 'error');
+                return back();
 
             }
             $bo = bo::where('refid', $request->refid)->first();
             if (isset($bo)) {
                 $mg = "duplicate transaction";
-                return view('bill', compact('user', 'mg'));
+                Alert::toast($mg, 'error');
+
+                return back();
 
             } else {
                 $user = User::find($request->user()->id);
@@ -141,7 +144,7 @@ Alert::error('Error', $am. ' '.$ph);
 
         if ($user->wallet < $request->amount) {
             $mg = "You Cant Make Purchase Above" . "NGN" . $request->amount . " from your wallet. Your wallet balance is NGN $user->wallet. Please Fund Wallet And Retry or Pay Online Using Our Alternative Payment Methods.";
-            Alert::success('Error', $mg);
+            Alert::error('Error', $mg);
             return redirect('select');
 
         }

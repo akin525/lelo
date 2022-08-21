@@ -147,7 +147,7 @@
 
             </div>
             <ul class="metismenu" >
-                <li><a href="{{url('welcome')}}" class="ai-icon">
+                <li><a href="{{route('welcome')}}" class="ai-icon">
                         <i class="flaticon-381-home"></i>
                         <span class="nav-text">Homepage</span>
                     </a>

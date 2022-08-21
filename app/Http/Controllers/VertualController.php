@@ -11,6 +11,7 @@ use App\Models\setting;
 use App\Models\wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -35,7 +36,7 @@ class VertualController
                 CURLOPT_SSL_VERIFYHOST => 0,
                 CURLOPT_SSL_VERIFYPEER => 0,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => array('account_name' => $user->username, 'business_short_name' => 'Lelescoenterprise', 'uniqueid' => $user->name, 'email' => $user->email, 'phone' => $user->phone, 'webhook_url' => 'https://Lelescoenterprise.com.ng/api/run',),
+                CURLOPT_POSTFIELDS => array('account_name' => $user->username.rand(111,999), 'business_short_name' => 'Lelescoenterprise', 'uniqueid' => $user->name, 'email' => $user->email, 'phone' => $user->phone, 'webhook_url' => 'https://Lelescoenterprise.com.ng/api/run',),
                 CURLOPT_HTTPHEADER => array(
                     'Authorization: mcd_key_qYnnxsFbbq7fO5CNHmNaD5YCey2vA'
                 ),
@@ -48,17 +49,24 @@ class VertualController
 //return $response;
 //var_dump(array('account_name' => $name,'business_short_name' => 'RENO','uniqueid' => $username,'email' => $email,'phone' => '08146328645', 'webhook_url'=>'https://renomobilemoney.com/go/run.php'));
             $data = json_decode($response, true);
-            $account = $data["data"]["account_name"];
-            $number = $data["data"]["account_number"];
-            $bank = $data["data"]["bank_name"];
+            if ($data['success']==1){
+                $account = $data["data"]["account_name"];
+                $number = $data["data"]["account_number"];
+                $bank = $data["data"]["bank_name"];
 
-            $user->account_number = $number;
-            $user->account_name = $account;
-            $user->save();
+                $user->account_number = $number;
+                $user->account_name = $account;
+                $user->save();
 
-            return redirect("dashboard")->withSuccess('You are not allowed to access');
+                Alert::success('Succeaa', 'Virtual Account Successful Created');
+                return redirect("dashboard")->with('success', 'You are not allowed to access');
 
 
+            }elseif ($data['success']==0){
+
+                Alert::error('Error', $response);
+                return redirect('dashboard');
+            }
         }
     }
     public function run(Request $request)
