@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://lelescoenterprise.com.ng/images/dlog.jpeg" />
     <title>{{ Auth::user()->name }} Dashboard| Lelescoenterprise </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/dlog.jpeg')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://lelescoenterprise.com.ng/images/dlog.jpeg">
     <link rel="stylesheet" href="{{asset('vendor/chartist/css/chartist.min.css')}}">
     <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
